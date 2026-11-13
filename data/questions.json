@@ -1,0 +1,27 @@
+[
+  {
+    "id": "Q1",
+    "question": "What is the difference between supervised and unsupervised learning?",
+    "keywords": [["label"], ["unlabel", "without label", "no label"], ["classification", "regression"], ["cluster"]]
+  },
+  {
+    "id": "Q2",
+    "question": "Explain overfitting in machine learning and give two ways to prevent it.",
+    "keywords": [["training data", "training set"], ["generaliz", "generalis", "unseen", "new data"], ["regulari"], ["cross-validation", "cross validation", "more data", "early stopping", "dropout", "pruning", "simpler model"]]
+  },
+  {
+    "id": "Q3",
+    "question": "What is the time complexity of binary search and why?",
+    "keywords": [["o(log n)", "log n", "logarithmic"], ["sorted"], ["half", "halv"]]
+  },
+  {
+    "id": "Q4",
+    "question": "State Newton's second law of motion and give a real-life example.",
+    "keywords": [["force"], ["mass"], ["acceleration"], ["f = ma", "f=ma", "f = m a", "mass times acceleration", "mass multiplied by acceleration"]]
+  },
+  {
+    "id": "Q5",
+    "question": "What is the role of mitochondria in a eukaryotic cell?",
+    "keywords": [["atp"], ["energy"], ["respiration"]]
+  }
+]

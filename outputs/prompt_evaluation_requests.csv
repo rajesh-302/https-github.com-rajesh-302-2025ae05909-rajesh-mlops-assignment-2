@@ -1,0 +1,169 @@
+question_id,prompt_version,model_name,start_time,end_time,latency_seconds,status,input_tokens,output_tokens,total_tokens,attempts,response_text,error,input_cost,output_cost,total_cost,valid_json,schema_valid,quality_keyword_coverage
+Q1,v1,gemini-3.5-flash-lite,2026-11-05T17:38:15.538+00:00,2026-11-05T17:38:18.851+00:00,3.3133,error_503,0,0,0,3,,InternalServerError: Error code: 503,0.0,0.0,0.0,False,False,0.0
+Q2,v1,gemini-3.5-flash-lite,2026-11-05T17:38:23.851+00:00,2026-11-05T17:38:26.397+00:00,2.5461,success,24,273,297,1,"**Overfitting** occurs when a machine learning model learns the training data *too well*, capturing not just the underlying patterns, but also the random noise and specific details of that exact dataset. 
+
+As a result, the model performs exceptionally well on the training data, but fails to generalize to new, unseen data (like validation or test data). It is like a student who memorizes the exact answers to a specific practice test rather than learning the actual concepts; when they see a new test with different questions, they fail.
+
+---
+
+### Two Ways to Prevent Overfitting
+
+1. **Use More Training Data**
+   * **Why it works:** Providing the model with a larger and more diverse dataset makes it harder for the model to memorize specific noise. Instead, it is forced to learn the broader, more general patterns that apply across all the data. *(If more data isn't available, you can also use a technique called **data augmentation** to artificially create new training examples).*
+
+2. **Apply Regularization**
+   * **Why it works:** Regularization adds a penalty to the model’s complexity during training (such as Lasso or Ridge regression, or Dropout in neural networks). It discourages the model from assigning too much importance to any single feature or having overly complex rules, pushing it toward simpler explanations that generalize better.",,7.2e-06,0.0006825000000000001,0.0006897,False,False,1.0
+Q3,v1,gemini-3.5-flash-lite,2026-11-05T17:38:31.398+00:00,2026-11-05T17:38:33.515+00:00,2.1167,success,22,396,418,1,"The time complexity of binary search is **$O(\log n)$** (logarithmic time), where $n$ is the number of elements in the sorted array. 
+
+Here is why:
+
+### 1. How Binary Search Works
+Binary search is a ""divide and conquer"" algorithm. To find a target value in a sorted array, it:
+1. Looks at the **middle** element of the array.
+2. If the target matches the middle element, the search is finished.
+3. If the target is smaller than the middle element, it eliminates the right half of the array and repeats the process on the left half.
+4. If the target is larger, it eliminates the left half and repeats on the right half.
+
+### 2. The Mathematical ""Why""
+Every time you make a single comparison in binary search, **you cut the remaining search space in half**. 
+
+Let's look at how the number of elements left to search shrinks with each step (assuming we don't find it immediately):
+* **Start (0 steps):** $n$ elements
+* **Step 1:** $\frac{n}{2}$ elements remaining
+* **Step 2:** $\frac{n}{4}$ elements remaining (which is $\frac{n}{2^2}$)
+* **Step 3:** $\frac{n}{8}$ elements remaining (which is $\frac{n}{2^3}$)
+* **...**
+* **$k$ steps:** $\frac{n}{2^k}$ elements remaining
+
+The search ends when there is only 1 element left in our search space:
+$$\frac{n}{2^k} = 1$$
+
+To find the number of steps ($k$), we can rearrange this equation:
+$$n = 2^k$$
+$$k = \log_2(n)$$
+
+Therefore, the maximum",,6.5999999999999995e-06,0.00099,0.0009966,False,False,1.0
+Q4,v1,gemini-3.5-flash-lite,2026-11-05T17:38:38.515+00:00,2026-11-05T17:38:41.701+00:00,3.1855,success,27,243,270,1,"**Newton's Second Law of Motion** states that the acceleration of an object depends on two variables: the net force acting upon the object and the mass of the object. 
+
+It is commonly expressed by the mathematical formula:
+$$\text{Force} = \text{mass} \times \text{acceleration} \quad (F = ma)$$
+
+This means that the heavier an object is, the more force is required to move it or change its speed. Conversely, the more force you apply to an object, the faster it will accelerate.
+
+---
+
+### Real-Life Example: Pushing a Shopping Cart
+
+Imagine you are at the grocery store:
+
+* **Empty Cart (Low Mass):** When the shopping cart is empty, it has very little mass. If you give it a small push (apply a small force), it accelerates quickly and rolls easily.
+* **Full Cart (High Mass):** When the cart is filled with heavy groceries, its mass increases significantly. If you apply the exact same push that you used on the empty cart, it will barely accelerate. To get the full cart to move at the same speed, you have to apply a much greater force.",,8.099999999999999e-06,0.0006075,0.0006156,False,False,1.0
+Q5,v1,gemini-3.5-flash-lite,2026-11-05T17:38:46.701+00:00,2026-11-05T17:38:48.455+00:00,1.7537,success,22,248,270,1,"The main role of mitochondria is to **generate energy** for the cell, which is why they are commonly referred to as the **""powerhouses of the cell.""** 
+
+Here is a breakdown of their primary functions in a eukaryotic cell:
+
+1. **Cellular Respiration (ATP Production):** Mitochondria take nutrients (like glucose) and oxygen from the cell and convert them into **adenosine triphosphate (ATP)**. ATP is the chemical energy ""currency"" that powers almost all cellular activities, such as movement, division, and chemical synthesis.
+2. **Regulation of the Cell Cycle:** They play a key role in signaling and cell division, as well as **apoptosis** (programmed cell death), which helps the body get rid of damaged or unneeded cells.
+3. **Calcium Storage:** Mitochondria help store and manage calcium ions, which are essential for various cell signaling processes, muscle contraction, and nerve function.
+4. **Heat Production:** In specialized tissues like brown fat, mitochondria can generate heat instead of ATP, which is particularly important for temperature regulation in newborns and hibernating animals. 
+
+In short, without mitochondria, eukaryotic cells would not have the energy required to survive and function.",,6.5999999999999995e-06,0.00062,0.0006266,False,False,1.0
+Q1,v2,gemini-3.5-flash-lite,2026-11-05T17:39:08.348+00:00,2026-11-05T17:39:10.376+00:00,2.0279,success,45,244,289,1,"Here is the difference between supervised and unsupervised learning, broken down simply:
+
+*   **Supervised Learning** is like learning with a teacher. You provide the computer with **labeled data**—meaning the data comes with the correct answers. The goal is for the computer to learn the relationship between the input data and the correct output so it can predict answers for new, unseen data. 
+    *   *Real-world example:* Teaching an algorithm to recognize emails as ""Spam"" or ""Not Spam"" by showing it thousands of emails that have already been labeled by humans.
+
+*   **Unsupervised Learning** is like learning on your own. You provide the computer with **unlabeled data**—data without any predefined answers or labels. The goal is for the computer to explore the data independently and find hidden patterns, structures, or groupings.
+    *   *Real-world example:* Grouping online shoppers into different market segments based on their browsing behavior, without telling the computer beforehand what categories to look for.
+
+**In short:**
+*   **Supervised** = Learning with **answers** provided.
+*   **Unsupervised** = Finding **hidden patterns** without answers.",,1.3500000000000001e-05,0.00061,0.0006234999999999999,False,False,0.5
+Q2,v2,gemini-3.5-flash-lite,2026-11-05T17:39:15.376+00:00,2026-11-05T17:39:17.650+00:00,2.2739,success,48,174,222,1,"**Overfitting** happens when a machine learning model learns the training data *too well*. Instead of learning the general underlying rules, the model memorizes the specific details and even the random noise of the training set. 
+
+As a result, the model performs wonderfully on the data it was trained on, but performs poorly on new, unseen data (it fails to ""generalize""). 
+
+---
+
+### Two Ways to Prevent Overfitting:
+
+1. **Use More Training Data:** 
+   Providing the model with a larger and more diverse dataset helps it distinguish between true underlying patterns and random noise. 
+
+2. **Regularization:** 
+   This technique adds a ""penalty"" to the model for being too complex. It discourages the model from relying too heavily on any single feature, forcing it to keep its general rules simpler and more robust.",,1.44e-05,0.000435,0.00044940000000000003,False,False,0.75
+Q3,v2,gemini-3.5-flash-lite,2026-11-05T17:39:35.598+00:00,2026-11-05T17:39:37.952+00:00,2.3533,success,46,282,328,2,"**Answer:**
+
+The time complexity of binary search is **$O(\log n)$** (logarithmic time). 
+
+Here is why:
+
+1. **How it works:** Binary search only works on sorted lists. With each step, it looks at the middle element of the search range. 
+2. **Eliminating half the data:** If the middle element isn't the target, the algorithm compares the target to the middle value. Because the list is sorted, it can immediately throw away **half** of the remaining data (either everything smaller or everything larger).
+3. **Logarithmic growth:** Imagine you have a list of 8 items. 
+   * After 1 step, 4 items remain.
+   * After 2 steps, 2 items remain.
+   * After 3 steps, 1 item remains. 
+   
+   It took at most 3 steps to find the item because $2^3 = 8$ (or $\log_2(8) = 3$). 
+
+In general, if you double the size of the input list (from $n$ to $2n$), binary search only takes **one extra step**. This steady, slow growth is what defines logarithmic time complexity ($O(\log n)$), making it exceptionally fast for large datasets compared to linear search ($O(n)$).",,1.38e-05,0.0007050000000000001,0.0007188000000000001,False,False,1.0
+Q4,v2,gemini-3.5-flash-lite,2026-11-05T17:39:42.952+00:00,2026-11-05T17:40:07.975+00:00,25.0227,success,51,207,258,1,"**Newton's Second Law of Motion** states that the acceleration of an object depends on two things: the net force acting upon the object and the mass of the object. 
+
+It is commonly written as the equation:
+$$\text{Force} = \text{mass} \times \text{acceleration} \quad (F = ma)$$
+
+In simple terms: The heavier an object is, the more force is needed to move it or change its speed. Also, the harder you push or pull an object, the faster it will speed up.
+
+**Real-life Example:**
+Pushing a shopping cart. 
+* **Empty cart:** It has a small mass, so it takes very little force to make it accelerate quickly. 
+* **Full cart:** It has a much larger mass. If you push it with the exact same amount of force as the empty cart, it will accelerate much slower. To make the full cart move just as fast, you have to apply a much greater force.",,1.53e-05,0.0005175,0.0005327999999999999,False,False,1.0
+Q5,v2,gemini-3.5-flash-lite,2026-11-05T17:40:12.976+00:00,2026-11-05T17:40:15.238+00:00,2.2624,success,46,159,205,1,"The primary role of mitochondria is to **generate energy** for the cell, which is why they are often referred to as the **""powerhouses of the cell.""** 
+
+Specifically, they perform aerobic cellular respiration, taking nutrients from the food we eat (like glucose) and oxygen, and converting them into **ATP (adenosine triphosphate)**. ATP acts as the main energy currency that powers various cellular activities.
+
+Beyond energy production, mitochondria also play important roles in:
+*   **Regulating metabolism:** Helping manage the cell's energy balance and chemical reactions.
+*   **Apoptosis:** Playing a key role in programmed cell death (clearing out damaged or unneeded cells).
+*   **Calcium storage:** Storing calcium ions, which are important for cell signaling.",,1.38e-05,0.00039749999999999996,0.00041129999999999997,False,False,1.0
+Q1,v3,gemini-3.5-flash-lite,2026-11-05T17:40:34.514+00:00,2026-11-05T17:40:52.540+00:00,18.026,success,83,107,190,2,"{
+""answer"": ""Supervised learning uses labeled data to train models to predict outcomes or classify information, whereas unsupervised learning uses unlabeled data to discover hidden patterns, structures, or groupings within the data."",
+""confidence"": ""high"",
+""key_points"": [
+""Supervised learning requires labeled training data."",
+""Unsupervised learning works with unlabeled data."",
+""Supervised learning is typically used for classification and regression tasks."",
+""Unsupervised learning is commonly used for clustering and association tasks.""
+]
+}",,2.49e-05,0.0002675,0.0002924,True,True,1.0
+Q2,v3,gemini-3.5-flash-lite,2026-11-05T17:41:19.669+00:00,2026-11-05T17:41:28.092+00:00,8.4227,success,86,130,216,3,"{
+""answer"": ""Overfitting occurs when a machine learning model learns the training data too well, capturing noise and random fluctuations rather than the underlying pattern, which leads to poor generalization on unseen data. Two common ways to prevent it are regularization (such as L1 or L2) and cross-validation."",
+""confidence"": ""high"",
+""key_points"": [
+""Model learns training data noise instead of general patterns"",
+""Results in poor performance on unseen data"",
+""Prevented using regularization techniques like L1/L2"",
+""Prevented using techniques like cross-validation and dropout""
+]
+}",,2.58e-05,0.000325,0.00035079999999999996,True,True,1.0
+Q3,v3,gemini-3.5-flash-lite,2026-11-05T17:41:33.092+00:00,2026-11-05T17:41:39.248+00:00,6.1555,success,84,103,187,1,"{
+""answer"": ""The time complexity of binary search is O(log n) because the algorithm divides the search space in half with each step, meaning the number of elements to search is halved iteratively until the target is found or the space is exhausted."",
+""confidence"": ""high"",
+""key_points"": [
+""Time complexity is O(log n)"",
+""Algorithm divides the search space in half during each iteration"",
+""Requires a sorted dataset to operate efficiently""
+]
+}",,2.52e-05,0.00025749999999999997,0.0002827,True,True,1.0
+Q4,v3,gemini-3.5-flash-lite,2026-11-05T17:41:44.248+00:00,2026-11-05T17:41:49.595+00:00,5.3465,success,89,0,89,1,,,2.67e-05,0.0,2.67e-05,False,False,0.0
+Q5,v3,gemini-3.5-flash-lite,2026-11-05T17:42:12.919+00:00,2026-11-05T17:42:15.744+00:00,2.8251,success,84,130,214,3,"{
+""answer"": ""Mitochondria are membrane-bound organelles in eukaryotic cells responsible for generating most of the chemical energy needed to power cellular biochemical reactions, primarily through the production of adenosine triphosphate (ATP) via cellular respiration. They also play a role in signaling, cellular differentiation, cell death, and maintaining control of the cell cycle and cell growth."",
+""confidence"": ""high"",
+""key_points"": [
+""Generate ATP through cellular respiration"",
+""Act as the primary energy producer of the eukaryotic cell"",
+""Involved in apoptosis (programmed cell death)"",
+""Regulate cellular metabolism and signaling""
+]
+}",,2.52e-05,0.000325,0.0003502,True,True,1.0

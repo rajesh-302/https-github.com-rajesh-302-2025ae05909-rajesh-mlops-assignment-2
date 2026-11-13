@@ -1,0 +1,4 @@
+prompt_version,registry_version,avg_latency_seconds,avg_input_tokens,avg_output_tokens,avg_cost_per_request,valid_json,schema_valid_rate,quality_keyword_coverage,success_rate,projected_monthly_cost_10k,recommended,run_id
+v1,1,2.4005,23.75,290.0,0.000732125,0.0,0.0,0.8,0.8,7.32125,no,b914bbdd2d9940d39cd338833dee1168
+v2,2,6.78804,47.2,213.2,0.00054716,0.0,0.0,0.85,1.0,5.4716,no,79640d05dcfe445f8f435dafa1787967
+v3,3,8.15516,85.2,94.0,0.00026056,0.8,0.8,0.8,1.0,2.6056,yes,63c00f6346c341c4b279c7e5d0c168ec
